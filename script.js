@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
             item.is_checked = false;
         }
 
-        localStorage.setItem("saveditems", JSON.stringify(details));
+        localStorage.setItem("savedstorageitems", JSON.stringify(details));
     }
 
     function createandappend(todo) {
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         divEle.appendChild(iconEle);
 
-        localStorage.setItem("saveditems", JSON.stringify(details));
+        localStorage.setItem("savedstorageitems", JSON.stringify(details));
 
     }
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
         createandappend(newtaskobj);
         userinput.value = "";
 
-        localStorage.setItem("saveditems", JSON.stringify(details));
+        localStorage.setItem("savedstorageitems", JSON.stringify(details));
 
 
     }
