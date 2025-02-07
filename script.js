@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let addbtn = document.getElementById("addbtn");
     let savebtn = document.getElementById("savebtn");
 
-    let details=[];
+    
 
     function storageArea() {
         let stringified = localStorage.getItem("savedstorageitems");
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    details = storageArea();
+    details = [];
     let listlength = details.length;
     console.log(details)
     
