@@ -4,17 +4,25 @@ document.addEventListener("DOMContentLoaded", function() {
     let addbtn = document.getElementById("addbtn");
     let savebtn = document.getElementById("savebtn");
 
-    
-
     function storageArea() {
-        let stringified = localStorage.getItem("savedstorageitems");
-        let parsedData = JSON.parse(stringified);
-        if (parsedData === "") {
-            return [];
-        } else {
-            return parsedData;
-        }
+        let stringifiedData = localStorage.getItem("savedstorageitems");
+
+        if (!stringifiedData) {
+        return [];
     }
+    try {
+        let parsedData = JSON.parse(stringifiedData);
+
+        if (Array.isArray(parsedData)) {
+            return parsedData;
+        } else {
+            return [];
+        }
+    } catch (error) {
+        console.error("Error parsing localStorage data:", error);
+        return [];
+    }
+}
     
     let details = storageArea();
     let listlength = details.length;
