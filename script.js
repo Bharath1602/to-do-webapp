@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return parsedData;
         }
     }
-
-    let details = storageArea();
+    let details=[];
+    details = storageArea();
     let listlength = details.length;
     console.log(details)
     
