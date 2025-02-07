@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    details = [];
+    let details = [];
     let listlength = details.length;
     console.log(details)
     
