@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let addbtn = document.getElementById("addbtn");
     let savebtn = document.getElementById("savebtn");
 
+    let details=[];
+
     function storageArea() {
         let stringified = localStorage.getItem("saveditems");
         let parsedData = JSON.parse(stringified);
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return parsedData;
         }
     }
-    let details=[];
+    
     details = storageArea();
     let listlength = details.length;
     console.log(details)
