@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let details=[];
 
     function storageArea() {
-        let stringified = localStorage.getItem("saveditems");
+        let stringified = localStorage.getItem("savedstorageitems");
         let parsedData = JSON.parse(stringified);
         if (parsedData === "") {
             return [];
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         details.splice(itemindex, 1);
 
-        localStorage.setItem("saveditems", JSON.stringify(details));
+        localStorage.setItem("savedstorageitems", JSON.stringify(details));
 
     }
 
